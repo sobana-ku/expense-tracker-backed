@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = express()
 app.use(express.json());
 const{v4:uuidv4} =require('uuid');
-mongoose.connect("mongodb://localhost:27017/expense").then(()=>{
+mongoose.connect("mongodb+srv://sobanak095:sobana123@cluster4.3wo37.mongodb.net/expense").then(()=>{
   console.log("Connected to mongoDB");
 });
 const expenseSchema = new mongoose.Schema({
@@ -78,7 +78,7 @@ app.put("/api/expenses/:id",async(req,res) =>{
 }
 });
 
-app.listen(5000,()=>{
+app.listen(4000,()=>{
     console.log("server is running");
 });
 
